@@ -48,7 +48,7 @@ header {
     padding-bottom: 5px;
 }
 
-.Navbar__Butons button , .Hero__Buttons button ,.HabitTips button{
+.Navbar__Butons button , .Hero__Buttons button ,.HabitTips button , .Cta__Content button{
     padding: 5px 35px;
     border-radius: 5px;
     margin-right: 15px;
@@ -145,10 +145,19 @@ header {
 }
 .HabitTips  article {
     width: 30%;
+    border: 1px solid rgb(139, 144, 247);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.HabitTips  article:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    z-index: 1; 
 }
 .HabitTips img {
     width: 100%;       
-    max-width: 300px;  
+    max-width: 400px;  
     height: auto;      
     border-radius: 15px;
     object-fit: cover; 
@@ -157,5 +166,42 @@ header {
 .HabitTips button {
     width: 100%;
     margin-top: 10px;
+}
+
+.Cta {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Cta__Content {
+    background-color: #FAFAFB;    
+    max-width: 80%;
+    height: auto;
+    padding: 70px;
+    z-index: 1;
+    text-align: center;
+    
+}
+.Cta__Content h3 {
+    font-size: 1.7rem;
+    font-family: "Poppins", serif;
+    color: #5159e2;
+    padding-bottom: 10px;
+}
+.Cta__Content p {
+    font-size: 1rem;
+    font-family: "Inter" sans-serif;
+    padding-bottom: 30px;
+}
+.Cta__Content button{
+    background-color: #5159e2;
+    color: #fff;
+    transition:  box-shadow 0.5s ease;
+}
+.Cta__Content button:hover {
+    box-shadow: -8px 7px 38px 0px #5159e2;
+
 }
 
