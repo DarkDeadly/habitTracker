@@ -19,7 +19,7 @@ header {
     gap: 20px;
     align-items: center;
 }
-.leftSideHeader h1 , .Features__detail  > h1 {
+.leftSideHeader h1 {
     font-size: 2rem;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
@@ -48,7 +48,7 @@ header {
     padding-bottom: 5px;
 }
 
-.Navbar__Butons button , .Hero__Buttons button {
+.Navbar__Butons button , .Hero__Buttons button ,.HabitTips button{
     padding: 5px 35px;
     border-radius: 5px;
     margin-right: 15px;
@@ -58,15 +58,15 @@ header {
     font-family: "Inter", sans-serif;
 
 }
-.Navbar__Butons button:hover, .Hero__Buttons button:hover{
+.Navbar__Butons button:hover, .Hero__Buttons button:hover , .HabitTips button:hover{
     background-color: rgb(81, 89, 226);
     color: white;
 }
-.Navbar__SignUpButton  , .Hero__JoinButton {
+.Navbar__SignUpButton  , .Hero__JoinButton  {
     background-color: rgb(81, 89, 226);
     color: white; 
 }
-.Navbar__SignInButton  , .Hero__SignInButton {
+.Navbar__SignInButton  , .Hero__SignInButton ,.HabitTips button {
     background-color: #fff;
 
 }
@@ -82,7 +82,7 @@ header {
 .Hero__Heading {
     text-align: center;
 }
-.Hero__Heading h1 {
+.Hero__Heading h2 , .HabitTips__section> h2 , .Features__detail  > h2  {
     font-size: 2.4rem;
     font-weight: bold;
     font-family: "Playfair Display", serif;
@@ -97,11 +97,15 @@ header {
     padding-bottom: 20px;
 }
 .Hero__Image > img {
-    height: 400px;
-    width: 850px;
+    height: auto;
+    width: 100%;
+    max-width: 850px;
     border-radius: 15px;
 }
+.Hero__Image>img , .HabitTips img {
+    object-fit: cover;
 
+}
 .Features__detail {
     text-align: center;
     margin-top: 50px;
@@ -113,14 +117,45 @@ header {
     padding: 40px 0;
 }
 
-.Feature__element h1 {
+.Feature__element h3 , .HabitTips h3{
     font-size: 1.4rem;
     font-family: "Playfair Display", serif;
     padding: 10px 0px;
     letter-spacing: 3px;
 }
-.Feature__element p {
+.Feature__element p , .HabitTips p {
     font-size: 1rem;
     color: rgb(97, 96, 96);
     font-family: serif;
 }
+.HabitTips__section {
+    margin-top: 50px;
+    
+}
+.HabitTips__section> h2 {
+    text-align: center;
+  
+}
+.HabitTips  {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+.HabitTips  article {
+    width: 30%;
+}
+.HabitTips img {
+    width: 100%;       
+    max-width: 300px;  
+    height: auto;      
+    border-radius: 15px;
+    object-fit: cover; 
+    display: block;
+}
+.HabitTips button {
+    width: 100%;
+    margin-top: 10px;
+}
+
