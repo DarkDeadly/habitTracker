@@ -3,7 +3,7 @@ HabitTracker helps you build better habits and stay consistent every day. Easily
 
 
 ## Development Journey
-View my [progress notes](progress.md) documenting:
+View my [progress notes](Progress.md) documenting:
 - Daily achievements
 - Technical breakthroughs
 - Lessons learned
