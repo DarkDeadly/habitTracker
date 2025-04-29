@@ -37,6 +37,15 @@
 - 🧩 **Component Thinking**: Structured CSS for easy React conversion later
 
 ## 2025-04-28 (3:58pm)
+✅ **Completed**: Added a Call To Action section called CTA
+✅ **Completed**: Added a footer
+✅ **Completed**: responsive design to the landing 
+
+## Key Lessons
+- **Grid when dealing with both column and row at the same time** : `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));` this willautomatically fit as many columns as it can based on the container's width at least 250px wide, but can grow up to a flexible size (1fr) 
+
 
 🔧 **Technical Breakthroughs**:
 1. Added the scaling effected when hovering over the HabitTips article with a little ease animation `transition: transform 0.3s ease, box-shadow 0.3s ease;` this will tell you that when u add transform there is an animation of ease with duration of 0.3s same as box-shadow to add depth
+2. concerning the responsive design on the typographie i learned that clamp is a good function that help in typographie it is modern responsive `font-size: clamp(0.875rem, 2.5vw, 1rem);`
+3. Flexbox is usually used to deal with row "or" column but grid deal with both row and column `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));`

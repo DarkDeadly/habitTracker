@@ -83,7 +83,7 @@ header {
     text-align: center;
 }
 .Hero__Heading h2 , .HabitTips__section> h2 , .Features__detail  > h2  {
-    font-size: 2.4rem;
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
     font-weight: bold;
     font-family: "Playfair Display", serif;
     padding-bottom: 10px;
@@ -91,7 +91,8 @@ header {
 
 }
 .Hero__Heading p {
-    font-size: 1.4rem;
+    font-size: clamp(0.875rem, 2.5vw, 1.4rem);
+
     font-family: "Inter", sans-serif;
     font-style: normal;
     padding-bottom: 20px;
@@ -112,19 +113,26 @@ header {
 }
 
 .Features__elements {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 0;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
 
+}
+.Feature__element {
+    border: 1px solid rgb(139, 144, 247);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .Feature__element h3 , .HabitTips h3{
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
     font-family: "Playfair Display", serif;
     padding: 10px 0px;
     letter-spacing: 3px;
 }
 .Feature__element p , .HabitTips p {
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
     color: rgb(97, 96, 96);
     font-family: serif;
 }
@@ -136,21 +144,19 @@ header {
     text-align: center;
   
 }
-.HabitTips  {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+.HabitTips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 40px 20px;
-    flex-wrap: wrap;
 }
-.HabitTips  article {
-    width: 30%;
+.HabitTips article {
     border: 1px solid rgb(139, 144, 247);
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.HabitTips  article:hover {
+.HabitTips  article:hover , .Feature__element:hover {
     transform: scale(1.03); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
     z-index: 1; 
@@ -185,13 +191,13 @@ header {
 
 }
 .Cta__Content h3 {
-    font-size: 1.7rem;
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
     font-family: "Poppins", serif;
     color: #5159e2;
     padding-bottom: 10px;
 }
 .Cta__Content p {
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
     font-family: "Inter" sans-serif;
     padding-bottom: 30px;
 }
@@ -243,6 +249,7 @@ footer {
     display: flex;
     list-style: none;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 20px ;
     border-bottom: 1px solid #fff;
 }
@@ -255,8 +262,50 @@ footer {
     background: linear-gradient(to right, #fff, #5159e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 20px;
 }
 footer p {
     text-align: center;
     padding: 20px;
 }
+
+
+@media (max-width: 964px) {
+    .leftSideHeader nav ,  .Navbar__Butons{
+      display: none;
+    }
+  }
+  @media (max-width : 768px) {
+    .Hero__Image > img {
+        border-radius: 0;
+    }
+    .Cta {
+        padding: 20px  0px;
+    }
+    .Cta__Content {
+        width: 100%;
+        padding: 20px;
+
+    }
+    .Footer__Bottom{
+        display: flex;
+        flex-direction: column;     
+    }
+    .Footer__subscription{
+        padding: 20px;
+    }
+    footer {
+        padding: 0px;
+    }
+  }
+ @media (max-width : 390px) {
+    .Subcription__Input button {
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .Subcription__Input input {
+        width: 100%;
+        border-radius: 10px;
+    }
+ }
