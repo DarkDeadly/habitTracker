@@ -8,32 +8,37 @@
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
     padding: 20px 30px;
-    align-items: center;
-   
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #ffff;
 }
 .leftSideHeader {
+   
     display: flex;
-    gap: 20px;
     align-items: center;
+    justify-content: space-between;
 }
 .leftSideHeader h1 {
     font-size: 2rem;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     letter-spacing: 5px;
+    z-index: 10000;
 
 }
 .leftSideHeader span {
     background: linear-gradient(to right, #140e22, #5159e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    z-index: 10000;
 }
 .NavbarLink__Wrapper {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
     font-size: 1.2rem;
 }
 .NavbarLink__Wrapper> li {
@@ -111,7 +116,11 @@ header {
     text-align: center;
     margin-top: 50px;
 }
-
+.HamburgerMenu {
+    display: none;
+    background-color: #fff;
+    border: none;
+}
 .Features__elements {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -269,11 +278,43 @@ footer p {
     padding: 20px;
 }
 
-
-@media (max-width: 964px) {
-    .leftSideHeader nav ,  .Navbar__Butons{
-      display: none;
+@media (max-width: 992px) {
+    .NavbarLink__Wrapper {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      background-color: #fafafbd5;
+      height: 100vh;
+      backdrop-filter: blur(7px);
+      width: 50%;
+      margin-right: -100%;
+      transition :  margin-right 0.7s ease;
     }
+    .mobile-menu {
+        margin-right: 0;
+        
+    }
+    
+    .NavbarLink__Wrapper li {
+        width: 100%;
+        padding: 10px 0;
+        border: 1px solid #fff;
+        text-align: center;
+    }
+    .Navbar__Butons {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 80%;
+    }
+    .HamburgerMenu {
+        display: block;
+        z-index: 22222;
+    }
+   
   }
   @media (max-width : 768px) {
     .Hero__Image > img {
@@ -304,8 +345,14 @@ footer p {
         width: 100%;
         margin-top: 10px;
     }
+    
     .Subcription__Input input {
         width: 100%;
         border-radius: 10px;
+    }
+ }
+ @media (max-width : 628px) {
+    .NavbarLink__Wrapper {
+        width: 100%;
     }
  }
