@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
 }
 
 header {
@@ -52,18 +53,7 @@ header {
     border-bottom: 1px solid rgb(81, 89, 226);
     padding-bottom: 5px;
 }
-
-.Navbar__Butons button , .Hero__Buttons button ,.HabitTips button , .Cta__Content button{
-    padding: 5px 35px;
-    border-radius: 5px;
-    margin-right: 15px;
-    border-color: rgb(81, 89, 226);
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: "Inter", sans-serif;
-
-}
-.Navbar__Butons button:hover, .Hero__Buttons button:hover , .HabitTips button:hover{
+.Btn:hover{
     background-color: rgb(81, 89, 226);
     color: white;
 }
@@ -86,14 +76,6 @@ header {
 }
 .Hero__Heading {
     text-align: center;
-}
-.Hero__Heading h2 , .HabitTips__section> h2 , .Features__detail  > h2  {
-    font-size: clamp(1.4rem, 4vw, 2.4rem);
-    font-weight: bold;
-    font-family: "Playfair Display", serif;
-    padding-bottom: 10px;
-    letter-spacing: 5px;
-
 }
 .Hero__Heading p {
     font-size: clamp(0.875rem, 2.5vw, 1.4rem);

@@ -6,7 +6,9 @@
     <title>HabitTracker</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../global.css">
 </head>
+
 <body>
     <header>
       <nav class="leftSideHeader">
@@ -16,8 +18,8 @@
                     <li class="Dashboard__Nav">DashBoard</li>
                     <li>About Us</li>
                     <div  class="Navbar__Butons">
-                        <button class="Navbar__SignInButton" type="button">Sign In</button>
-                        <button class="Navbar__SignUpButton" type="button">Sign Up</button>
+                        <button class="Btn Navbar__SignInButton" type="button"><a href="../AuithenticationPage/authPage.html" class="Navbar__SignInButton">Sign In</a></button>
+                        <button class="Btn Navbar__SignUpButton" type="button"><a href="../AuithenticationPage/authPage.html"  class="Navbar__SignUpButton">Sign Up</a></button>
                     </div>
                 </ul> 
                 <button class="HamburgerMenu" aria-label="Toggle Navigation">
@@ -27,11 +29,11 @@
     </header>
     <section class="Hero__section">
         <div class="Hero__Heading">
-            <h2>Track Your Habit, <br> Transform your Life</h2>
+            <h2 class="Subtitle">Track Your Habit, <br> Transform your Life</h2>
             <p>A Habit Tracker Designed to help you build a sustainable Life</p>
             <div class="Hero__Buttons">
-                <button class="Hero__SignInButton">Sign In</button>
-                <button class="Hero__JoinButton">Join Us</button>
+                <button class="Btn Hero__SignInButton">Sign In</button>
+                <button class="Btn Hero__JoinButton">Join Us</button>
             </div>
         </div>
         <div class="Hero__Image">
@@ -40,7 +42,7 @@
     </section>
 
     <section class="Features__detail">
-        <h2>Features Overview</h2>
+        <h2 class="Subtitle">Features Overview</h2>
         <div class="Features__elements">
             <div class="Feature__element">
                 <img src="../../Images/video.svg" alt="Habit_trackSvg">
@@ -60,25 +62,25 @@
         </div>
     </section>
     <section class="HabitTips__section">
-        <h2>Sustainable Habits for a Better Tomorrow</h2>
+        <h2 class="Subtitle">Sustainable Habits for a Better Tomorrow</h2>
         <div class="HabitTips">
             <article>
                 <img src="../../Images/Animation - 1745787045906.gif" alt="GoalSetAnimation">
                 <h3>Set Realistic Goals</h3>
                 <p>Break down your larger goals into daily or weekly tasks</p>
-                <button>See More..</button>
+                <button class="Btn">See More..</button>
             </article>
             <article>
                 <img src="../../Images/tracking.jpg" alt="GoalSetAnimation">
                 <h3>Track Progress Regularly</h3>
                 <p>Consistency is key! Make it a habit to check your progress every day or week.</p>
-                <button>See More..</button>
+                <button class="Btn">See More..</button>
             </article>        
             <article>
                 <img src="../../Images/celebrate.jpg" alt="GoalSetAnimation">
                 <h3>Celebrate Small Wins</h3>
                 <p>Don’t wait until you’ve completed a huge goal to celebrate. </p>
-                <button>See More..</button>
+                <button class="Btn">See More..</button>
             </article>
         </div>
     </section>
@@ -86,7 +88,7 @@
         <div class="Cta__Content">
             <h3>Join Habit Tracker Now</h3>
             <p>Take the First Step to building a sustainable Habit a developing yourself .</p>
-            <button>Sign Up Now</button>
+            <button class="Btn">Sign Up Now</button>
         </div>
     </section>
 
