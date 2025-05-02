@@ -55,3 +55,13 @@
 
 🔧 **Technical Breakthroughs**:
 with the help JavaScript we could make it when we click on the hamburger a class of `mobile-menu` will appear and when we click again it dissapears this with the help of `classList.toggle('mobile-menu')`
+
+## 2025-05-01
+✅ **Completed**:made some changes into the CSS adding `global.css` which contains Global CSS and reusable components
+✅ **Completed** : the authentication UI + responsiveness
+
+## Key Lessons 
+had some problem with the slider effect which was a bit difficult but i learned the way of implementing it shown in the second note of the `Technical Breakthroughs`
+🔧 **Technical Breakthroughs**:
+1. `flex: 1` tells the element: “Stretch in the direction of the container’s layout and fill what’s left.” You don’t need to set exact widths or heights — `flex: 1` adapts dynamically.
+2. considering the slider animation of two items it is prefered to wrap the two element in a class called `slider` assign 200% width and the parent container of `slider` will take `overflow:hidden` and the `transformX` will be the key factor

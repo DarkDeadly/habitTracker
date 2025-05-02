@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Authentication__Layout {
+    flex: 1;
+    overflow: hidden;
+    max-height: 100%;
+}
+.auth-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out
+ 
+}
+.auth-slider .SignIn__Layout {
+    height: 100%;
+    width: 100%;
+    border-top: 2px solid rgb(81, 89, 226);  
+    display: flex;
+}
+.SignIn__Layout form  , .Signup__Layout form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.SignIn__Layout  .form_content , .Signup__Layout .form_content {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 80%;
+    padding-top: 10px;
+}
+.SignIn__Layout  .form_content input {
+    padding: 10px 20px;
+}
+.SignIn__Layout form span , .Signup__Layout form span {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.form_content input:focus {
+    border-color: rgb(81, 89, 226)
+}
+.Signup__Layout {
+    height: auto;
+    width: 100%;
+    border-top: 2px solid rgb(81, 89, 226);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.SignIn__Layout form , .Signup__Layout form {
+    width: 60%;
+}
+.auth__Title {
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
+    font-family: "Poppins", serif;
+    color: #797ed4;
+}
+.SignIn__Layout form p , .signup__announcement p{
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-family: "Inter" sans-serif;
+    text-align: center;
+}
+.signup__announcement , .signIn__announcement{
+    width: 40%;
+    background-color:rgb(81, 89, 226) ;
+}
+.SignIn__Layout form button , .Signup__Layout form button {
+    background-color: #fff;
+    width: 70%;
+}
+.signup__announcement button , .signIn__announcement button {
+    background-color: #131eeb;
+}
+.signup__announcement , .signIn__announcement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    gap: 10px;
+}
+
+@media (max-width : 745px) {
+    .signIn__announcement , .signup__announcement {
+        display: none;
+    }
+    .Signup__Layout form , .SignIn__Layout form  {
+        width: 100%;
+    }
+}
