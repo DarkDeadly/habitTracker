@@ -29,8 +29,8 @@ html, body {
 }
 .auth-slider .SignIn__Layout {
     height: auto;
+    min-height: 100%;
     width: 100%;
-    border-top: 2px solid rgb(81, 89, 226);  
     display: flex;
     
 }
@@ -63,10 +63,11 @@ html, body {
 }
 
 
+
 .Signup__Layout {
     height: auto;
+    min-height: 100%;
     width: 100%;
-    border-top: 2px solid rgb(81, 89, 226);
     display: flex;
     flex-direction: row-reverse;
 }

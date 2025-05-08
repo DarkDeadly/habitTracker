@@ -44,3 +44,11 @@
 .AuthInput:focus {
     border-color: rgb(81, 89, 226); 
 }
+
+.AuthInput:valid:not(:placeholder-shown){
+    border-color: rgb(15, 163, 15);
+}
+
+.AuthInput:invalid:not(:placeholder-shown) {
+    border-color: red;
+}

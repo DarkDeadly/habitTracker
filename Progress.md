@@ -65,3 +65,29 @@ had some problem with the slider effect which was a bit difficult but i learned 
 🔧 **Technical Breakthroughs**:
 1. `flex: 1` tells the element: “Stretch in the direction of the container’s layout and fill what’s left.” You don’t need to set exact widths or heights — `flex: 1` adapts dynamically.
 2. considering the slider animation of two items it is prefered to wrap the two element in a class called `slider` assign 200% width and the parent container of `slider` will take `overflow:hidden` and the `transformX` will be the key factor
+
+## 2025-05-08
+
+✅ **Completed**: made some changes into the CSS adding global.css which contains Global CSS and reusable components
+✅ **Completed**: the authentication UI + responsiveness
+✅ **Completed**: fixed landscape layout issues on the authentication screen where form content was getting cut off on smaller height devices (e.g., 740×360)
+
+## Key Lessons
+While testing responsiveness, I realized that although the UI looked good on portrait view (e.g., 360×740), it broke in landscape view (740×360). The root cause was using fixed min-height values and missing height constraints on parents. I learned that vertical space is limited in landscape mode, so content must be allowed to scroll or adapt fluidly.media query to remove min-height from forms on shorter screens:
+``
+## 🔧 Technical Breakthroughs:
+Fixing landscape layout issues:
+Avoid setting fixed min-height values that don’t scale with screen height
+Use media queries to adjust layout for smaller vertical space:
+```css
+@media (max-height: 500px) {
+  .SignIn__Layout form,
+  .Signup__Layout form {
+    min-height: unset;
+    height: auto;
+    padding: 1rem 0;
+  }
+}
+```
+Ensure overflow-y: auto is enabled on scrollable containers
+Use height: 100% or min-height: 100vh strategically to support scrolling
