@@ -2,28 +2,37 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 
 .Authentication__Layout {
     flex: 1;
-    overflow: hidden;
+    overflow-x: hidden;
     max-height: 100%;
+    overflow-y: auto;
+   
 }
 .auth-slider {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 200%;
-    height: 100%;
+    height: auto; 
+    min-height: 100vh; 
     transition: transform 0.5s ease-in-out
  
 }
+.auth-slider form h3 {
+    color: rgb(81, 89, 226);
+}
 .auth-slider .SignIn__Layout {
-    height: 100%;
+    height: auto;
     width: 100%;
     border-top: 2px solid rgb(81, 89, 226);  
     display: flex;
+    
 }
 .SignIn__Layout form  , .Signup__Layout form{
     display: flex;
@@ -31,6 +40,10 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    width: 60%;
+    padding: 2rem 0; 
+    min-height: 400px; 
+    height: auto; 
 }
 .SignIn__Layout  .form_content , .Signup__Layout .form_content {
     text-align: start;
@@ -49,9 +62,7 @@ html, body {
     color: blueviolet;
 }
 
-.form_content input:focus {
-    border-color: rgb(81, 89, 226)
-}
+
 .Signup__Layout {
     height: auto;
     width: 100%;
@@ -66,7 +77,7 @@ html, body {
 .auth__Title {
     font-size: clamp(1.1rem, 3vw, 1.7rem);
     font-family: "Poppins", serif;
-    color: #797ed4;
+    
 }
 .SignIn__Layout form p , .signup__announcement p{
     font-size: clamp(0.875rem, 2.5vw, 1rem);
@@ -76,6 +87,7 @@ html, body {
 .signup__announcement , .signIn__announcement{
     width: 40%;
     background-color:rgb(81, 89, 226) ;
+    height: auto;
 }
 .SignIn__Layout form button , .Signup__Layout form button {
     background-color: #fff;
@@ -100,5 +112,15 @@ html, body {
     }
     .Signup__Layout form , .SignIn__Layout form  {
         width: 100%;
+        height: auto; 
+        min-height: unset; 
+    }
+}
+@media (max-height: 500px) {
+    .SignIn__Layout form,
+    .Signup__Layout form {
+        min-height: unset;
+        height: auto;
+        padding: 1rem 0;
     }
 }
