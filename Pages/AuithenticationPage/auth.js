@@ -19,6 +19,10 @@ const SignInPass__Error = document.querySelector(".SignInPassword__Error");
 const SignIN__Email = document.querySelector("#SignIn__Email");
 const SignIN__Password = document.querySelector("#SignIn__Password");
 
+
+//Showcase Elements Variable 
+const DashboardLink = document.querySelector(".Dashboard__Nav")
+
 // Error messages
 const errorMessages = {
     length: "Password must be at least 8 characters",
@@ -165,9 +169,11 @@ Register__Button.addEventListener("click", (event) => {
 });
 
 // Event listener for SignIn button
-SignIn__button.addEventListener("click", (e) => {
-    e.preventDefault();
+SignIn__button.addEventListener("click", () => {
+   
     SignInVerification(SignIN__Email.value, SignIN__Password.value);
+    window.location.reload();
+
 });
 
 // Event listeners for real-time input validation
@@ -176,7 +182,15 @@ SignIn__button.addEventListener("click", (e) => {
         input.addEventListener(eventType, updateRegisterButtonState);
     });
 });
+document.addEventListener("DOMContentLoaded" , () => {
+    const isLoggedIn = localStorage.getItem("loginUser")
 
+    if (!isLoggedIn) {
+        DashboardLink.style.display = "none" 
+    }else {
+        DashboardLink.style.display = "block"
+    }
+})
 // Slider animation for switching between SignIn/SignUp
 tosignUp.addEventListener("click", () => {
     slider.style.transform = 'translateX(-50%)';
