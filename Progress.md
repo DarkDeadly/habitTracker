@@ -91,3 +91,12 @@ Use media queries to adjust layout for smaller vertical space:
 ```
 Ensure overflow-y: auto is enabled on scrollable containers
 Use height: 100% or min-height: 100vh strategically to support scrolling
+
+## 2025-05-09
+
+✅ **Completed**: Form Validation with JavaScript
+✅ **Completed**: during the SignUp after verification we added the user in the localStorage and verified the existance of email during signUp(u cant signup with the same email) with the help localStorage
+✅ **Completed**:Login Procedure
+
+## Key Lessons
+when we set the localStorage item you must JSON.stringify(data)

@@ -7,95 +7,110 @@
     <link rel="stylesheet" href="../HomePage/styles.css">
     <link rel="stylesheet" href="authStyle.css">
     <link rel="stylesheet" href="../../global.css">
-
 </head>
 <body>
     <header>
         <nav class="leftSideHeader">
-              <h1>Habit <span>Tracker</span></h1>
-                  <ul class="NavbarLink__Wrapper">
-                      <li>Home</li>
-                      <li class="Dashboard__Nav">DashBoard</li>
-                      <li>About Us</li>                     
-                  </ul> 
-                  <button class="HamburgerMenu" aria-label="Toggle Navigation">
-                      <img src="../../Images/menu.svg" alt="Open menu"> 
-                  </button>
+            <h1>Habit <span>Tracker</span></h1>
+            <ul class="NavbarLink__Wrapper">
+                <li>Home</li>
+                <li class="Dashboard__Nav">DashBoard</li>
+                <li>About Us</li>                     
+            </ul> 
+            <button class="HamburgerMenu" aria-label="Toggle Navigation">
+                <img src="../../Images/menu.svg" alt="Open menu"> 
+            </button>
         </nav>
-      </header>
-      <section class="Authentication__Layout">
+    </header>
+    <section class="Authentication__Layout">
         <div class="auth-slider">
-          <div class="SignIn__Layout">
-            <form >
-               <h3 class="auth__Title">Sign In to Your Habit Tracker</h3>
-               <p>Access your habits, track progress, and stay on course.</p>
-               <div class="form_content">
-                <label for="SignIn__Email">Email :</label>
-               <input 
-               type="email" 
-               id="SignIn__Email" 
-               class="AuthInput" 
-               placeholder="you@example.com"
-               required
-               >
-               <label for="SignIn__Password">Password :</label>
-               <input 
-               type="password" 
-               id="SignIn__Password" 
-               class="AuthInput" 
-               placeholder="enter your password"
-               >
-               </div>
-               <p>dont have an account ? <span class="to__SignUp">register</span></p>
-               <button class="Btn" type="button">Login</button>
-               <button class="Btn" type="button">Continue with google</button>
-            </form>
-          <div class="signup__announcement">
-            <h3 class="auth__Title">Join HabitTracker</h3>
-            <p>Create your account and take the first step toward consistent personal growth.</p>
-            <button class="Btn to__SignUp">Sign Up</button>
-          </div>
+            <!-- SignIn Layout -->
+            <div class="SignIn__Layout">
+                <form>
+                    <h3 class="auth__Title">Sign In to Your Habit Tracker</h3>
+                    <p>Access your habits, track progress, and stay on course.</p>
+                    <div class="form_content">
+                        <label for="SignIn__Email">Email :</label>
+                        <input 
+                            type="email" 
+                            id="SignIn__Email" 
+                            class="AuthInput" 
+                            placeholder="you@example.com"
+                            required
+                        >
+                        <span class="SignInEmail__Error"></span>
+                        <label for="SignIn__Password">Password :</label>
+                        <input 
+                            type="password" 
+                            id="SignIn__Password" 
+                            class="AuthInput" 
+                            placeholder="enter your password"
+                        >
+                        <span class="SignInPassword__Error"></span>
+
+                    </div>
+                    <p>don't have an account? <span class="to__SignUp">register</span></p>
+                    <button class="Btn SignIN__Button" type="button">Login</button>
+                    <button class="Btn" type="button">Continue with google</button>
+                </form>
+                <div class="signup__announcement">
+                    <h3 class="auth__Title">Join HabitTracker</h3>
+                    <p>Create your account and take the first step toward consistent personal growth.</p>
+                    <button class="Btn to__SignUp">Sign Up</button>
+                </div>
+            </div>
+
+            <!-- Signup Layout -->
+            <div class="Signup__Layout">
+                <form>
+                    <h3 class="auth__Title">Join HabitTracker</h3>
+                    <p>Create your account and take the first step.</p>
+                    <div class="form_content">
+                        <label for="SignUp__Email">Email :</label>
+                        <input 
+                            type="email" 
+                            id="SignUp__Email" 
+                            class="AuthInput AuthInput__Verif" 
+                            placeholder="you@example.com" 
+                            required
+                        >
+                        <div class="Email__Error"></div>
+                        <label for="SignUp__Password">Password :</label>
+                        <input 
+                            type="password" 
+                            id="SignUp__Password" 
+                            class="AuthInput AuthInput__Verif" 
+                            placeholder="enter your password"
+                            required 
+                            minlength="8"
+                            pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+                            title="Password must be at least 8 characters long and include at least one uppercase letter and one number"
+                        >
+                        <div class="Password__Errors"></div>
+                        <label for="Password__confirmation">Confirm Password :</label>
+                        <input 
+                            type="password" 
+                            id="Password__confirmation" 
+                            class="AuthInput" 
+                            placeholder="Re-enter your password"
+                            required
+                        >
+                        <span class="PassConfirm__Error"></span>
+                    </div>
+                    <p>you have an account? <span class="to__SignIn">Login</span></p>
+                    <button class="Register__btn" disabled type="button">Register</button>
+                    <button class="Btn">Continue with google</button>
+                </form>
+                <div class="signIn__announcement">
+                    <h3 class="auth__Title">Sign In to Your Habit Tracker</h3>
+                    <p>Access your habits, track progress, and stay on course.</p>
+                    <button class="Btn to__SignIn">Sign In</button>
+                </div>
+            </div>
         </div>
-        <div class="Signup__Layout">
-            <form >
-              <h3 class="auth__Title">Join HabitTracker</h3>
-              <p>Create your account and take the first step.</p>
-              <div class="form_content">
-               <label for="SignUp__Email">Email :</label>
-              <input 
-              type="email" 
-              id="SignUp__Email" 
-              class="AuthInput" 
-              placeholder="you@example.com" 
-              required>
-              <label for="SignUp__Password">Password :</label>
-              <input 
-              type="password" 
-              id="SignUp__Password" 
-              class="AuthInput" 
-              placeholder="enter your password"
-              required 
-              minlength="8"
-              pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
-              title="Password must be at least 8 characters long and include at least one uppercase letter and one number"
-              >
-              <label for="Password__confirmation">Confirm Password :</label>
-              <input type="password" id="Password__confirmation" class="AuthInput" placeholder="Re-enter your password">
-              </div>
-              <p>you have an account ? <span class="to__SignIn">Login</span></p>
-              <button class="Btn">Register</button>
-              <button class="Btn">Continue with google</button>
-            </form>
-          <div class="signIn__announcement">
-            <h3 class="auth__Title">Sign In to Your Habit Tracker</h3>
-            <p>Access your habits, track progress, and stay on course</p>
-            <button class="Btn to__SignIn">Sign In</button>
-          </div>
-        </div>
-        </div>
-        
-      </section>
+    </section>
+
+    <script src="../AuithenticationPage/auth.js"></script>
+    <script src="../HomePage/index.js"></script>
 </body>
-<script src="../AuithenticationPage/auth.js"></script>
-<script src="../HomePage/index.js"></script>
 </html>
