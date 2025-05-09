@@ -22,6 +22,7 @@ const SignIN__Password = document.querySelector("#SignIn__Password");
 
 //Showcase Elements Variable 
 const DashboardLink = document.querySelector(".Dashboard__Nav")
+const Logout__Btn = document.querySelector(".Logout__Btn")
 
 // Error messages
 const errorMessages = {
@@ -176,6 +177,7 @@ SignIn__button.addEventListener("click", () => {
 
 });
 
+
 // Event listeners for real-time input validation
 ["input", "keyup"].forEach(eventType => {
     [signUpEmailInput, signUpPasswordInput, passwordConfirmInput].forEach(input => {
@@ -187,8 +189,10 @@ document.addEventListener("DOMContentLoaded" , () => {
 
     if (!isLoggedIn) {
         DashboardLink.style.display = "none" 
+        Logout__Btn.style.display = "none"
     }else {
         DashboardLink.style.display = "block"
+        Logout__Btn.style.display = "block"
     }
 })
 // Slider animation for switching between SignIn/SignUp
@@ -198,3 +202,10 @@ tosignUp.addEventListener("click", () => {
 tosignIN.addEventListener("click", () => {
     slider.style.transform = 'translateX(0%)';
 });
+
+
+Logout__Btn.addEventListener("click" , () => {
+    localStorage.removeItem("loginUser")
+    window.location.reload();
+
+})

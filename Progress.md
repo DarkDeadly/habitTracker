@@ -97,6 +97,6 @@ Use height: 100% or min-height: 100vh strategically to support scrolling
 ✅ **Completed**: Form Validation with JavaScript
 ✅ **Completed**: during the SignUp after verification we added the user in the localStorage and verified the existance of email during signUp(u cant signup with the same email) with the help localStorage
 ✅ **Completed**:Login Procedure
-
+✅ **Completed**:Logout Functionality
 ## Key Lessons
 when we set the localStorage item you must JSON.stringify(data)
