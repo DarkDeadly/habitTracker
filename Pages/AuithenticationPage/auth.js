@@ -23,6 +23,8 @@ const SignIN__Password = document.querySelector("#SignIn__Password");
 //Showcase Elements Variable 
 const DashboardLink = document.querySelector(".Dashboard__Nav")
 const Logout__Btn = document.querySelector(".Logout__Btn")
+const habit__nav = document.querySelector(".habit__nav")
+
 
 // Error messages
 const errorMessages = {
@@ -61,8 +63,8 @@ const SignInVerification = (email, password) => {
     const userData = JSON.parse(EmailExistance);
     if (userData.password === password) {
         SignIN__Password.style.borderColor = "rgb(15, 163, 15)";
-        alert("Login Successful");
         localStorage.setItem("loginUser", JSON.stringify(userData));
+        window.location.href = "../HabitManager/HabitManager.html"
         return true;
     } else {
         SignInPass__Error.textContent = "Incorrect password.";
@@ -173,7 +175,6 @@ Register__Button.addEventListener("click", (event) => {
 SignIn__button.addEventListener("click", () => {
    
     SignInVerification(SignIN__Email.value, SignIN__Password.value);
-    window.location.reload();
 
 });
 
@@ -190,9 +191,11 @@ document.addEventListener("DOMContentLoaded" , () => {
     if (!isLoggedIn) {
         DashboardLink.style.display = "none" 
         Logout__Btn.style.display = "none"
+        habit__nav.style.display = "none"
     }else {
         DashboardLink.style.display = "block"
         Logout__Btn.style.display = "block"
+        habit__nav.style.display = "block"
     }
 })
 // Slider animation for switching between SignIn/SignUp

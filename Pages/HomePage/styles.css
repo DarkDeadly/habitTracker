@@ -43,7 +43,7 @@ header {
 
    
 }
-.NavbarLink__Wrapper li:hover {
+.NavbarLink__Wrapper li a:hover {
     color: rgb(81, 89, 226);
     border-bottom: 1px solid rgb(81, 89, 226);
     padding-bottom: 5px;
