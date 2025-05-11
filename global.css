@@ -54,3 +54,104 @@
 .AuthInput__Verif:invalid:not(:placeholder-shown) {
     border-color: red;
 }
+header {
+    padding: 20px 30px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #ffff;
+}
+
+.leftSideHeader {
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftSideHeader h1 {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    z-index: 10000;
+
+}
+.leftSideHeader span {
+    background: linear-gradient(to right, #140e22, #5159e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 10000;
+}
+.NavbarLink__Wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.2rem;
+}
+.NavbarLink__Wrapper> li {
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+
+   
+}
+.NavbarLink__Wrapper li a:hover {
+    color: rgb(81, 89, 226);
+    border-bottom: 1px solid rgb(81, 89, 226);
+    padding-bottom: 5px;
+}
+.Navbar__SignUpButton  , .Hero__JoinButton  {
+    background-color: rgb(81, 89, 226);
+    color: white; 
+}
+.Navbar__SignInButton  , .Hero__SignInButton ,.HabitTips button {
+    background-color: #fff;
+
+}
+.HamburgerMenu {
+    display: none;
+}
+@media (max-width: 992px) {
+    .NavbarLink__Wrapper {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      background-color: #fafafbd5;
+      height: 100vh;
+      backdrop-filter: blur(7px);
+      width: 50%;
+      margin-right: -100%;
+      transition :  margin-right 0.7s ease;
+    }
+    .mobile-menu {
+        margin-right: 0;
+        
+    }
+    
+    .NavbarLink__Wrapper li {
+        width: 100%;
+        padding: 10px 0;
+        border: 1px solid #fff;
+        text-align: center;
+    }
+    .Navbar__Butons {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 80%;
+    }
+    .HamburgerMenu {
+        display: block;
+        z-index: 22222;
+    }
+   
+  }
+
+  @media (max-width : 628px) {
+    .NavbarLink__Wrapper {
+        width: 100%;
+    }
+ }

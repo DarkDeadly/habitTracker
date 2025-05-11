@@ -209,6 +209,6 @@ tosignIN.addEventListener("click", () => {
 
 Logout__Btn.addEventListener("click" , () => {
     localStorage.removeItem("loginUser")
-    window.location.reload();
+    window.location.href = "../HomePage/index.html";
 
 })
