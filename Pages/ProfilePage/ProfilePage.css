@@ -36,12 +36,17 @@ header {
     background-color: red;
     color: #fff;
     border-color: red;
+    margin-top: 10px;
     transition: background-color  ease-in .5s ;
 }
+
 .Delete__Btn:hover {
         background-color: rgba(255, 0, 0, 0.712);
         border-color: rgba(255, 0, 0, 0.712);
 
+}
+.Profile__Section > h1 {
+text-align: center;
 }
 .edit__Text p:hover{
     cursor: pointer;
@@ -61,4 +66,29 @@ header {
 }
 .AuthInput {
     width: 100%;
+}
+.Email__Confirm , .Password__Confirm{
+    display: none;
+}
+@media (max-width: 992px) {
+    .leftSideHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+   html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+header {
+    width: 100%;
+}
+}
+@media (max-width : 375px) {
+     .Btn {
+        width: 100%;
+     }
 }

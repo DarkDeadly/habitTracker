@@ -6,27 +6,26 @@
     <title>HabitTracker</title>
     <link rel="stylesheet" href="../../global.css">
     <link rel="stylesheet" href="ProfilePage.css">
+
 </head>
 <body>
-    <header>
-      <nav class="leftSideHeader">
-            <h1>Habit <span>Tracker</span></h1>
-                <ul class="NavbarLink__Wrapper">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="habit__nav"> <a href="../HabitManager/HabitManager.html">Habits</a></li>
-                    <li class="Dashboard__Nav"><a>DashBoard</a></li>
-                    <li><a>About Us</a></li>
-                    <div  class="Navbar__Butons">
-                        <a href="../AuithenticationPage/authPage.html" class="Navbar__SignInButton"> <button class="Btn Navbar__SignInButton" type="button">Sign In</button></a>
-                       <a href="../AuithenticationPage/authPage.html"  class="Navbar__SignUpButton"><button class="Btn Navbar__SignUpButton" type="button">Sign Up</button></a>
-                        
-                    </div>
-                    <button class="Btn Logout__Btn">Logout</button>
-                </ul> 
-                <button class="HamburgerMenu" aria-label="Toggle Navigation">
-                    <img src="../../Images/menu.svg" alt="Open menu"> 
-                </button>
-      </nav>
+     <header>
+        <nav class="leftSideHeader">
+            <a href="../HomePage/index.html"><h1>Habit <span>Tracker</span></h1></a>
+         
+            <ul class="NavbarLink__Wrapper">
+                <li><a href="../HomePage/index.html">Home</a></li>
+                <li class="habit__nav">Habits</li>
+                <li><a href="../ProfilePage/ProfilePage.html">Profile</a></li>
+                <li class="Dashboard__Nav">DashBoard</li>
+                <li>About Us</li>      
+                <button class="Btn Logout__Btn">Logout</button>
+               
+            </ul> 
+            <button class="HamburgerMenu" aria-label="Toggle Navigation">
+                <img src="../../Images/menu.svg" alt="Open menu"> 
+            </button>
+        </nav>
     </header>
     <section class="Profile__Section">
             <h1 class="Subtitle">Account Informations</h1>
@@ -35,35 +34,33 @@
                     <div class="Username__Info">
                         <div class="edit__Text">
                             <label for="">Username : </label>
-                            <p>edit</p>
+                            <p class="Edit__usernameText">edit</p>
                         </div>
                         <input type="text" id="Username__Edit" class="AuthInput">
                     </div>
                      <div class="Email__Info">
                         <div class="edit__Text">
                             <label for="Email__Edit">email : </label>
-                            <p>edit</p>
+                            <p class="Edit__emailText">edit</p>
                         </div>
-                        <input type="email" id="Email__Edit" class="AuthInput">
+                        <input type="email" id="Email__Edit" class="AuthInput" disabled>
                     </div>
                      <div class="Email__Confirm">
                         <div class="edit__Text">
                             <label for="Email__Confirm">Confirm Email : </label>
-                            <p>edit</p>
                         </div>
-                        <input type="email" id="Email__Confirm" class="AuthInput">
+                        <input type="email" id="Email__Confirm" class="AuthInput" >
                     </div>
                      <div class="Password__Info">
                         <div class="edit__Text">
                             <label for="Password__Edit">Password : </label>
-                            <p>edit</p>
+                            <p class="Edit__passwordText">edit</p>
                         </div>
-                        <input type="password" id="Password__Edit" class="AuthInput">
+                        <input type="password" id="Password__Edit" class="AuthInput" disabled>
                     </div>
                        <div class="Password__Confirm">
                         <div class="edit__Text">
                             <label for="Password__Confirm">Confirm Password : </label>
-                            <p>edit</p>
                         </div>
                         <input type="password" id="Password__Confirm" class="AuthInput">
                     </div>
@@ -75,4 +72,5 @@
     </section> 
 </body>
 <script src="../HomePage/index.js"></script>
+<script src="ProfilePage.js"></script>
 </html>
