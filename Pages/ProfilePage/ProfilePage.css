@@ -70,6 +70,11 @@ text-align: center;
 .Email__Confirm , .Password__Confirm{
     display: none;
 }
+.Edit__passwordText {
+    
+    background:transparent;
+
+}
 @media (max-width: 992px) {
     .leftSideHeader {
         display: flex;

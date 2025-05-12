@@ -33,7 +33,7 @@
                 <form action="">
                     <div class="Username__Info">
                         <div class="edit__Text">
-                            <label for="">Username : </label>
+                            <label for="Username__Edit">Username : </label>
                             <p class="Edit__usernameText">edit</p>
                         </div>
                         <input type="text" id="Username__Edit" class="AuthInput">
@@ -49,22 +49,38 @@
                         <div class="edit__Text">
                             <label for="Email__Confirm">Confirm Email : </label>
                         </div>
-                        <input type="email" id="Email__Confirm" class="AuthInput" >
+                        <input 
+                        type="email" 
+                        id="Email__Confirm" 
+                        class="AuthInput AuthInput__Verif" 
+                        placeholder="you@example.com" 
+                        required >
+                        <div class="NewEmailError"></div>
                     </div>
                      <div class="Password__Info">
                         <div class="edit__Text">
-                            <label for="Password__Edit">Password : </label>
+                            <label for="Password__Edit">Current Password : </label>
                             <p class="Edit__passwordText">edit</p>
                         </div>
                         <input type="password" id="Password__Edit" class="AuthInput" disabled>
                     </div>
                        <div class="Password__Confirm">
                         <div class="edit__Text">
-                            <label for="Password__Confirm">Confirm Password : </label>
+                            <label for="Password__Confirm">New Password : </label>
                         </div>
-                        <input type="password" id="Password__Confirm" class="AuthInput">
+                        <input 
+                        type="password" 
+                        id="Password__Confirm" 
+                        class="AuthInput AuthInput__Verif"
+                        required 
+                        minlength="8"
+                        pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+                        title="Password must be at least 8 characters long and include at least one uppercase letter and one number"
+                        >
+                        <div class="Password__Errors"></div>
+
                     </div>
-                    <button type="button" class="Btn">Submit</button>
+                    <button type="button" class="Btn SubmitBtn">Submit</button>
                     <button type="button" class="Btn Delete__Btn">Delete Account</button>
 
                 </form>

@@ -100,3 +100,8 @@ Use height: 100% or min-height: 100vh strategically to support scrolling
 ✅ **Completed**:Logout Functionality
 ## Key Lessons
 when we set the localStorage item you must JSON.stringify(data)
+## 2025-05-12
+✅ **Completed** : Profile Edit Functionality and UI Done
+## Key Lessons
+when u read a data in local Storage and u want to use it's data u must wrap it inside JSON.parse() like this 
+`const VariableName = JSON.parse(localStorage.getItem(leyName"))`
