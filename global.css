@@ -7,8 +7,8 @@
         box-sizing: border-box;
         list-style: none;
         text-decoration: none;
-    }
 
+    }
     a {
         color: #000;
     }
@@ -75,7 +75,6 @@ header {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     letter-spacing: 5px;
-    z-index: 10000;
 
 }
 .leftSideHeader span {
@@ -157,6 +156,7 @@ header {
   @media (max-width : 628px) {
     .NavbarLink__Wrapper {
         width: 100%;
-        height: 100%;
+        
     }
  }
+ 

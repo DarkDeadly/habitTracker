@@ -160,6 +160,7 @@ const SignUpVerification = (event) => {
             password: pass
         };
         localStorage.setItem(user.email, JSON.stringify(user));
+        window.location.reload()
         console.log("submitted successfully");
     } else {
         console.log("Form submission failed due to validation errors.");

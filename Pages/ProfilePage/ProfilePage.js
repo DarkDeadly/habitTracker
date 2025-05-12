@@ -1,6 +1,7 @@
 // TextEdit Variables
 const EmailEdit__Text = document.querySelector(".Edit__emailText");
 const PasswordEdit__Text = document.querySelector(".Edit__passwordText");
+const UsernameEdit__Text = document.querySelector(".Edit__usernameText")
 const EmailEdit__Content = document.querySelector(".Email__Confirm");
 const PasswordEdit__Content = document.querySelector(".Password__Confirm");
 const Password__Input = document.querySelector("#Password__Edit");
@@ -10,6 +11,7 @@ const UserName__Input = document.querySelector("#Username__Edit");
 const SubmitBtn = document.querySelector(".SubmitBtn");
 const Password__Errors = document.querySelector(".Password__Errors");
 const NewEmail__Error = document.querySelector(".NewEmailError");
+const Delete__Btn = document.querySelector(".Delete__Btn")
 
 const user = JSON.parse(localStorage.getItem("loginUser"));
 
@@ -23,6 +25,10 @@ Email__Input.value = user.email;
 UserName__Input.value = user.username || "";
 
 let emailEdited = false; // Flag to track if email is being edited
+
+UsernameEdit__Text.addEventListener("click" , () => {
+   UserName__Input.disabled = false ; 
+})
 
 EmailEdit__Text.addEventListener("click", () => {
     Email__Input.disabled = false;
@@ -120,3 +126,19 @@ SubmitBtn.addEventListener("click", () => {
         window.location.reload()
     }
 });
+Delete__Btn.addEventListener("click" , (e) => {
+    e.preventDefault()
+    localStorage.removeItem(user.email)
+    localStorage.removeItem("loginUser")
+    window.location.href = "../HomePage/index.html"
+
+})
+PasswordConfirm__Input.addEventListener("input", () => {
+    const newPassword = PasswordConfirm__Input.value;
+    NewPasswordVerification(newPassword);
+});
+Email__Confirm.addEventListener("input", () => {
+    const email = Email__Confirm.value.trim().toLowerCase();
+    NewEmailVerification(email);
+});
+
