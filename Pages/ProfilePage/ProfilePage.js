@@ -133,6 +133,7 @@ Delete__Btn.addEventListener("click" , (e) => {
     window.location.href = "../HomePage/index.html"
 
 })
+
 PasswordConfirm__Input.addEventListener("input", () => {
     const newPassword = PasswordConfirm__Input.value;
     NewPasswordVerification(newPassword);

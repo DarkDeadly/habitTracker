@@ -27,9 +27,25 @@
             </button>
         </nav>
     </header>
+   <button class="Btn HabitAdd__btn">+ Add Habit</button> 
+   <section class="Habit__Section">
+    <main class="Habit__content">
+        
+    </main>
 
-
+   </section>
+    <div class="modal-overlay" id="habitModal">
+     <div class="modal">
+     <h3 class="Subtitle">Add your New Daily Habit</h3>
+     <form id="habitForm">
+        <input type="text" class="AuthInput HabitInput" placeholder="Enter habit name" required />
+        <button type="submit" class="Btn AddHabit__btn">Add Habit</button>
+    </form>
+    <button class="Btn Close__Modal__Btn">Close</button>
+  </div>
+</div>
     <script src="../HomePage/index.js"></script>
     <script src="../AuithenticationPage/auth.js"></script>
+    <script src="HabitManager.js"></script>
 </body>
 </html>

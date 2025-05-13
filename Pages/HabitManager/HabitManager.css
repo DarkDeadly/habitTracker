@@ -1,0 +1,116 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    align-items: end;
+}
+
+.HabitAdd__btn {
+    width: 30%;
+    margin: 20px;
+}
+.Habit__Section {
+    flex: 1;
+    height: 100%;
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+  
+}
+.Habit__content {
+    width: 97%;
+    min-height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Habit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 97%;
+    border: 1px solid rgb(81, 89, 226);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.Habit p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-family: serif
+}
+.Habit input {
+    padding: 50px;
+}
+.HabitBtn {
+    display: flex;
+    gap: 10px;
+}
+.DeleteBtn {
+    background-color: red;
+    border-color: red;
+    transition : background-color ease-in 0.4s , border-color ease-in 0.4s
+}
+.DeleteBtn:hover {
+    background-color: rgba(255, 0, 0, 0.582);
+    border-color: rgba(255, 0, 0, 0.582);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* hidden by default */
+  place-items: center; /* centers modal */
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#habitForm {
+    display: flex;
+    flex-direction: column;
+}
+.Close__Modal__Btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width : 566px) {
+    .HabitAdd__btn {
+        width: 90%;
+    }
+}
+@media (max-width: 375px) {
+  .modal {
+    padding: 15px;
+    max-width: 90%;
+  }
+}
