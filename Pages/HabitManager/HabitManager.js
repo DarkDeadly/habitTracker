@@ -6,7 +6,7 @@ const AddHabit__btn = document.querySelector(".AddHabit__btn");
 const HabitInput = document.querySelector(".HabitInput");
 
 let user = JSON.parse(localStorage.getItem("loginUser")) || {}; // Get user from local storage
-
+const oneDay = 24 * 60 * 60 * 1000;
 // Validate habit input
 const AddHabit__Verification = (habit) => {
     if (habit.trim() === "") {
@@ -16,9 +16,28 @@ const AddHabit__Verification = (habit) => {
     HabitInput.style.borderColor = ""; // Reset border if valid
     return true;
 };
+const CheckHabit = () => {
+    const now = Date.now();
+    let updated = false; 
+
+    user.habit.forEach((habit) => {
+        const timeSinceLastCheck  = now - habit.lastChecked;
+        if (timeSinceLastCheck >= oneDay) {
+            habit.incompleted += 1;
+            habit.lastChecked = now;
+            updated = true;
+        }
+    });
+
+    if (updated) {
+        localStorage.setItem("loginUser", JSON.stringify(user));
+        localStorage.setItem(user.email, JSON.stringify(user));
+    }
+};
 
 // Display all habits
 const displayHabit = () => {
+    CheckHabit()
     HabitContent.innerHTML = ""; // Clear existing habits
 
     if (user.habit && user.habit.length > 0) {
@@ -58,15 +77,15 @@ modalOverlay.addEventListener('click', (e) => {
 AddHabit__btn.addEventListener("click", (e) => {
     e.preventDefault();
     const HabitInputValue = HabitInput.value.trim();
-
     const isValid = AddHabit__Verification(HabitInputValue);
     if (!isValid) return;
-
+    const now = new Date()
     const habitInfo = {
         habitName: HabitInputValue,
-        createdAt: Date.now().toString(),
+        createdAt: now.toLocaleString(),
         completed: 0,
         incompleted: 0,
+        lastChecked : Date.now()
     };
 
     user = JSON.parse(localStorage.getItem("loginUser")) || {};
@@ -106,10 +125,10 @@ HabitContent.addEventListener("click", (e) => {
 HabitContent.addEventListener("click"  , (e) => {
     if (e.target.classList.contains("CompleteBtn")) {
         const clickedHabit = e.target.dataset.habitName;
-        console.log(clickedHabit)
         const completedHabit = user.habit.find(habitiItem => habitiItem.habitName === clickedHabit)
         if (completedHabit) {
             completedHabit.completed += 1 ;
+            completedHabit.lastChecked = Date.now();
              localStorage.setItem("loginUser" , JSON.stringify(user))
              localStorage.setItem(user.email , JSON.stringify(user))
              alert(`Congratulation on completing your Task Habit`) 
