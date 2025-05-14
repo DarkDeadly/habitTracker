@@ -27,8 +27,8 @@ const displayHabit = () => {
             habitDiv.className = "Habit";
             habitDiv.innerHTML = `
                 <p>${item.habitName}</p>
-                <div class="HabitBtn">
-                    <button type="button" class="Btn">Complete</button>
+                <div class="HabitBtn"> 
+                    <button type="button" class="Btn CompleteBtn" data-habit-name="${item.habitName}">Complete</button>
                     <button type="button" class="Btn DeleteBtn" data-habit-name="${item.habitName}">Delete</button>
                 </div>
             `;
@@ -87,8 +87,11 @@ AddHabit__btn.addEventListener("click", (e) => {
         displayHabit();
         HabitInput.value = "";
         modalOverlay.style.display = 'none';
+       
     }
 });
+
+
 
 HabitContent.addEventListener("click", (e) => {
     if (e.target.classList.contains("DeleteBtn")) {
@@ -100,6 +103,21 @@ HabitContent.addEventListener("click", (e) => {
       displayHabit(); 
     }
 });
+HabitContent.addEventListener("click"  , (e) => {
+    if (e.target.classList.contains("CompleteBtn")) {
+        const clickedHabit = e.target.dataset.habitName;
+        console.log(clickedHabit)
+        const completedHabit = user.habit.find(habitiItem => habitiItem.habitName === clickedHabit)
+        if (completedHabit) {
+            completedHabit.completed += 1 ;
+             localStorage.setItem("loginUser" , JSON.stringify(user))
+             localStorage.setItem(user.email , JSON.stringify(user))
+             alert(`Congratulation on completing your Task Habit`) 
+            displayHabit();
+        }
+    
 
+    }
+})
 // Initial display
 displayHabit();
