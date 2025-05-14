@@ -105,3 +105,95 @@ when we set the localStorage item you must JSON.stringify(data)
 ## Key Lessons
 when u read a data in local Storage and u want to use it's data u must wrap it inside JSON.parse() like this 
 `const VariableName = JSON.parse(localStorage.getItem(leyName"))`
+
+## 2025-05-11
+✅ Completed: Dynamic habit rendering on screen
+✅ Completed: Added "Complete" and "Delete" functionality
+
+🔧 Technical Breakthroughs:
+🧱 Dynamic DOM rendering using document.createElement
+
+🗑️ Efficient deletion by filtering the habit array
+
+✅ Completing a habit adds to completed streak & updates timestamp
+
+## 2025-05-12
+✅ Completed: Modal functionality
+✅ Completed: Input validation for habit name
+
+🔧 Technical Breakthroughs:
+✅ Modal closes when clicking outside the content box
+
+🧪 Simple input validation using trim()
+
+🟥 Visual feedback using borderColor
+```JS
+// Modal control
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) modalOverlay.style.display = "none";
+});
+
+// Input validation
+const AddHabit__Verification = (habit) => {
+  if (habit.trim() === "") {
+    HabitInput.style.borderColor = "red";
+    return false;
+  }
+  return true;
+};
+```
+## 2025-05-13
+✅ Completed: Daily habit checking logic (24-hour rule)
+
+Key Lessons
+🕒 Use timestamps for habit checking
+
+⏳ Compare Date.now() with lastChecked to calculate elapsed time
+
+🔧 Technical Breakthroughs:
+⏰ Implemented Date.now() to track time
+
+📈 Added incompleted counter if habit not checked within 24 hours
+
+```JS
+const oneDay = 24 * 60 * 60 * 1000;
+const CheckHabit = () => {
+  const now = Date.now();
+  user.habit.forEach((habit) => {
+    const timePassed = now - habit.lastChecked;
+    if (timePassed >= oneDay) {
+      habit.incompleted += 1;
+      habit.lastChecked = now;
+    }
+  });
+  localStorage.setItem("loginUser", JSON.stringify(user));
+};
+
+```
+
+## 2025-05-14 
+
+✅ Completed: Event delegation on parent for dynamic button clicks
+✅ Completed: Synchronized data between loginUser and user email
+
+🔧 Technical Breakthroughs:
+🧠 Used event delegation to handle dynamic buttons efficiently
+
+🔁 Synced data to both loginUser and user.email key in localStorage
+
+```JS
+// Event delegation
+HabitContent.addEventListener("click", (e) => {
+  const habitName = e.target.dataset.habitName;
+  if (e.target.classList.contains("DeleteBtn")) {
+    user.habit = user.habit.filter(habit => habit.habitName !== habitName);
+  } else if (e.target.classList.contains("CompleteBtn")) {
+    const habit = user.habit.find(h => h.habitName === habitName);
+    habit.completed += 1;
+    habit.lastChecked = Date.now();
+  }
+  localStorage.setItem("loginUser", JSON.stringify(user));
+  localStorage.setItem(user.email, JSON.stringify(user));
+});
+
+```
