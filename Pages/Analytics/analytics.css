@@ -1,0 +1,40 @@
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Text_analytics {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 20px;
+}
+.analytic__Card {
+    padding: 20px;
+    border: 2px solid rgb(81, 89, 226);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.analytic__Card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+
+}
+.Subtitle {
+    text-align: center;
+}
+
+  @media (max-width: 960px) {
+    .Text_analytics  {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+    @media (max-width: 660px) {
+    .Text_analytics  {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

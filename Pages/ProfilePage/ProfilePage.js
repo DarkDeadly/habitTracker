@@ -12,7 +12,7 @@ const SubmitBtn = document.querySelector(".SubmitBtn");
 const Password__Errors = document.querySelector(".Password__Errors");
 const NewEmail__Error = document.querySelector(".NewEmailError");
 const Delete__Btn = document.querySelector(".Delete__Btn")
-
+const newPasswordValue = document.querySelector("#Password__Confirm")
 const user = JSON.parse(localStorage.getItem("loginUser"));
 
 const errorMessages = {
@@ -110,7 +110,8 @@ SubmitBtn.addEventListener("click", () => {
         const updatedUser = {
             username: UserName__Input.value.trim(),
             email: newEmailValue,
-            password: newPasswordValue
+            password: newPasswordValue,
+            habit : user.habit
         };
 
         // Remove old email from localStorage if changed
@@ -134,8 +135,8 @@ Delete__Btn.addEventListener("click" , (e) => {
 
 })
 
-PasswordConfirm__Input.addEventListener("input", () => {
-    const newPassword = PasswordConfirm__Input.value;
+newPasswordValue.addEventListener("input", () => {
+    const newPassword = newPasswordValue.value;
     NewPasswordVerification(newPassword);
 });
 Email__Confirm.addEventListener("input", () => {

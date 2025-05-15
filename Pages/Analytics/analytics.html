@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HabitTracker</title>
-    <link rel="stylesheet" href="../HomePage/styles.css">
     <link rel="stylesheet" href="../../global.css">
-    <link rel="stylesheet" href="HabitManager.css">
+    <link rel="stylesheet" href="analytics.css">
 </head>
 <body>
-   <header>
+       <header>
         <nav class="leftSideHeader">
             <a href="../HomePage/index.html"><h1>Habit <span>Tracker</span></h1></a>
          
             <ul class="NavbarLink__Wrapper">
                 <li><a href="../HomePage/index.html">Home</a></li>
-                <li class="habit__nav">Habits</li>
+                <li class="habit__nav"><a href="../HabitManager/HabitManager.html">Habits</a></li>
                 <li><a href="../ProfilePage/ProfilePage.html">Profile</a></li>
                 <li class="Dashboard__Nav"><a href="../Analytics/analytics.html">DashBoard</a></li>
                 <li>About Us</li>      
@@ -27,25 +26,18 @@
             </button>
         </nav>
     </header>
-   <button class="Btn HabitAdd__btn">+ Add Habit</button> 
-   <section class="Habit__Section">
-    <main class="Habit__content">
+    <h2 class="Subtitle">Your Analytics : </h2>
+    <section class="Text_analytics">
         
-    </main>
+    </section>
 
-   </section>
-    <div class="modal-overlay" id="habitModal">
-     <div class="modal">
-     <h3 class="Subtitle">Add your New Daily Habit</h3>
-     <form id="habitForm">
-        <input type="text" class="AuthInput HabitInput" placeholder="Enter habit name" required />
-        <button type="submit" class="Btn AddHabit__btn">Add Habit</button>
-    </form>
-    <button class="Btn Close__Modal__Btn">Close</button>
-  </div>
-</div>
-    <script src="../HomePage/index.js"></script>
-    <script src="../AuithenticationPage/auth.js"></script>
-    <script src="HabitManager.js"></script>
+
+
+
+
+
+
+    <script src="../HomePage/index.js "></script>
+    <script src="analytics.js"></script>
 </body>
 </html>

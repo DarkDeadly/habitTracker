@@ -38,7 +38,7 @@ body {
     margin: 10px 0;
 }
 .Habit p {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: 1.5rem;
     font-family: serif
 }
 .Habit input {
@@ -112,5 +112,13 @@ body {
   .modal {
     padding: 15px;
     max-width: 90%;
+  }
+}
+@media (max-width : 900px) {
+  .Habit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
   }
 }
